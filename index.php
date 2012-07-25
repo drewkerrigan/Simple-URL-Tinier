@@ -14,7 +14,7 @@ $key = isset($_GET['k']) ? $_GET['k'] : false;
 $shortUrl = false;
 
 //Processing starts here
-if(newUrl || $key) {
+if($newUrl || $key) {
 	$client = new RiakClient($riakHost, $riakPort);
 	$bucket = $client->bucket($urlBucket);
 	
